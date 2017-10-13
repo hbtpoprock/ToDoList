@@ -59,7 +59,6 @@ class App extends React.Component {
     }
 
     onComplete(e) {
-      console.log(e.target);
       var $target = $(e.target);
       var $segment = $target.closest( ".ui.segment" );
       var $label = $target.siblings( "label" );
@@ -69,7 +68,6 @@ class App extends React.Component {
         $label.html("<span class='my-label'>Completed !</span>");
         var index = e.target.id;
         var newIndex = index.replace("checkbox", "");
-        console.log("id ===== " + newIndex);
 
         this.state.completedIndex.push(newIndex);
         this.setState({
@@ -156,13 +154,15 @@ class App extends React.Component {
                   <div className="ui inverted vertical masthead center aligned segment">
                     <div className="ui text container">
                       <h1 className="ui inverted header">
-                        TODO list web application
+                        To Do list web application
                       </h1>
                       <h3>by Supanat Piphitpattanaprapt</h3>
-                      <div className="ui big primary button"><a style={{color:'white'}} href="mailto:oaksupanat@gmail.com">
-                        Contact <span style={{textTransform: 'none',fontWeight: '200'}}>oaksupanat@gmail.com </span> </a>
-                        <i style={{marginLeft: '1rem'}} className="mail icon"></i>
-                      </div>
+                      <a style={{color:'white'}} href="mailto:oaksupanat@gmail.com">
+                        <div className="ui big primary button">
+                          Contact <span style={{textTransform: 'none',fontWeight: '200'}}>oaksupanat@gmail.com </span>
+                          <i style={{marginLeft: '1rem'}} className="mail icon"></i>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>

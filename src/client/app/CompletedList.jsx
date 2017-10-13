@@ -27,7 +27,6 @@ class CompletedList extends React.Component {
 
           var arrayCompleteIndex = this.props.completedIndex;
           var items = this.props.items;
-          console.log('TAB2==========='+arrayCompleteIndex);
           if(arrayCompleteIndex.length!==0){
 
             for(let i = 0; i<arrayCompleteIndex.length; i++){
